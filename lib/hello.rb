@@ -1,9 +1,18 @@
+
+
+
+
+
+
+
+
+
 def hello_t(array)
   if block_given?
-    i = 0 
+    i = 0 #i = index
   
-    while i < array.length 
-      yield array[i]
+    while i < array.length # items in array
+      yield array[i] #yield keyword is running the code below when hello_t is called
       i = i + 1 
     end
   
@@ -13,10 +22,3 @@ def hello_t(array)
   end
 end
 
-# call your method here!
-
-hello_t(["Tim", "Tom", "Jim"]) do |name|
-  if name.start_with?("T")
-    puts "Hi, #{name}"
-  end
-end
